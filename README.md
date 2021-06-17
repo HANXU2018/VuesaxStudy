@@ -1,2 +1,0 @@
-# VuesaxStudy
-VuesaxStudy
