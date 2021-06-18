@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         这里是父组件
-        <HelloWorld :name="name" @egeFn="egeParent"></HelloWorld>
+        <!-- 传入了 number 值给子组件 -->
+        <HelloWorld :number="number"></HelloWorld>
 
         <span>父组件接收到的值为：{{age}}</span>
     </div>
@@ -16,6 +17,7 @@
             return {
                 name: '小明',
                 age: null,
+                number:10,
             };
         },
         components: {
