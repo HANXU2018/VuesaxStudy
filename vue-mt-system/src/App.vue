@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         这里是父组件
-        <HelloWorld :name="name"></HelloWorld>
+        <HelloWorld :name="name" @egeFn="egeParent"></HelloWorld>
+
+        <span>父组件接收到的值为：{{age}}</span>
     </div>
 </template>
 
@@ -13,10 +15,16 @@
         data() {
             return {
                 name: '小明',
+                age: null,
             };
         },
         components: {
             HelloWorld,
+        }, methods: {
+            egeParent(data) {
+                // 这里参数就是子组件的值
+                this.age = data;
+            },
         },
     }
 </script>

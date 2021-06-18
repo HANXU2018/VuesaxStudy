@@ -10,12 +10,18 @@
     export default {
         name: 'HelloWorld',
         data() {
-            return {};
+            return {
+                ege: 12,
+            };
         }, props: {
             name: {
                 type: String, // 定义了传入值的类型
                 default: null, // 定义默认值
             },
+        }, // 在 mounted 生命周期里直接传递数据到父组件中
+        mounted() {
+            // 参数允许传入多个
+            this.$emit('egeFn', this.ege);
         },
     };
 </script>
