@@ -1,0 +1,8 @@
+.app {
+  &-text {
+    color: red;
+  }
+  &:hover {
+    color: blue;
+  }
+}
