@@ -1,37 +1,12 @@
 <template>
     <div id="app">
-        这里是父组件
-        <!-- 传入了 number 值给子组件 -->
-        <HelloWorld :number="number"></HelloWorld>
 
-        <span>父组件接收到的值为：{{age}}</span>
-
-        <p>混入的数据为 {{mixinsData}}</p>
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue';
-    import myMixin from "./utils/mixins";
-
     export default {
         name: 'App',
-        mixins: [myMixin],
-        data() {
-            return {
-                name: '小明',
-                age: null,
-                number:10,
-            };
-        },
-        components: {
-            HelloWorld,
-        }, methods: {
-            egeParent(data) {
-                // 这里参数就是子组件的值
-                this.age = data;
-            },
-        },
     }
 </script>
 
