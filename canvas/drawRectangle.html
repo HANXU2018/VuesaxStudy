@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绘制文字</title>
+</head>
+
+<body>
+<canvas id="drawText" width="500" height="300">
+    您的浏览器不支持 Canvas，请更换浏览器！
+</canvas>
+
+<script type="text/javascript">
+    function draw() {
+        let canvas = document.getElementById('drawText');
+
+        // 首先要进行浏览器支持性判断
+        if (canvas.getContext) {
+            // 1. 创建画布
+            const ctx = canvas.getContext('2d');
+
+            // 2. 设置阴影
+            ctx.shadowColor = '#999999';
+
+            // 3. 设置阴影模糊
+            ctx.shadowBlur = 2;
+
+            // 4. 设置阴影偏移量
+            ctx.shadowOffsetX = 10;
+            ctx.shadowOffsetY = 10;
+
+            // 5. 设置文字样式
+            ctx.font = 'bold italic 50px fakt-web';
+
+            // 6. 设置填充的颜色
+            ctx.fillStyle = '#7ed321';
+
+            // 7. 设置并填充文字文本
+            ctx.fillText('这里是文本', 10, 100);
+            ctx.strokeText('这里是文本', 10, 200);
+            ctx.strokeText('这里是文本', 10, 100);
+        }
+    }
+    // 进行绘画
+    draw();
+</script>
+</body>
+</html>
