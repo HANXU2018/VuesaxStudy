@@ -5,14 +5,18 @@
         <HelloWorld :number="number"></HelloWorld>
 
         <span>父组件接收到的值为：{{age}}</span>
+
+        <p>混入的数据为 {{mixinsData}}</p>
     </div>
 </template>
 
 <script>
     import HelloWorld from './components/HelloWorld.vue';
+    import myMixin from "./utils/mixins";
 
     export default {
         name: 'App',
+        mixins: [myMixin],
         data() {
             return {
                 name: '小明',
