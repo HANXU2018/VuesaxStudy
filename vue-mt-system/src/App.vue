@@ -1,11 +1,21 @@
 <template>
     <div id="app">
-        <p class="app-text">{{data1}}</p>
-        <Chart />
+<!--        <Notification/>-->
+<!--        <Slidebar/>-->
+<!--        <VuesaxDemo/>-->
+<!--        <VuesaxContent/>-->
+<!--        <vs-button>-->
+<!--            Hello World Vuesax + Nuxtjs-->
+<!--        </vs-button>-->
 
-        <DataV />
+<!--        <p class="app-text">{{data1}}</p>-->
+<!--        <Chart />-->
 
-        <DynamicData/>
+<!--        <DataV />-->
+
+<!--        <DynamicData/>-->
+        <Card/>
+        123
     </div>
 </template>
 
@@ -13,6 +23,16 @@
     import Chart from './components/Chart.vue';
     import DataV from './components/DataV.vue';
     import DynamicData from './components/DynamicData.vue';
+
+    import VuesaxDemo from './components/VuesaxDemo.vue';
+
+    import VuesaxContent from "./components/VuesaxContent";
+
+    import Slidebar from "./components/Slidebar";
+
+    import Notification from "./components/Notification";
+
+    import Card  from "./components/Card";
 
     export default {
         name: 'App',
@@ -25,6 +45,11 @@
             Chart,
             DataV,
             DynamicData,
+            VuesaxDemo,
+            VuesaxContent,
+            Slidebar,
+            Notification,
+            Card,
         },
     }
 </script>
